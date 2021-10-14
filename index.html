@@ -10,10 +10,10 @@
 
 <script>
 function myFunction() {
-  var person = prompt("Please enter mobile number", "+91 XXXXXXXXXX");
-  if (person != null) {
+  var mob_num = prompt("Please enter mobile number", "+91 XXXXXXXXXX");
+  if (mob_num != null) {
     document.getElementById("demo").innerHTML =
-    "http://api.whatsapp.com/send?phone=" + person;
+    "http://api.whatsapp.com/send?phone=+91" + mob_num;
   }
 }
 </script>
