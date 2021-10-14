@@ -2,15 +2,15 @@
 <html>
 <body>
 
-<p>Click the button to demonstrate the prompt box.</p>
+<p>Enter the mobile number you want to DM in the prompt box.</p>
 
-<button onclick="myFunction()">Try it</button>
+<button onclick="myFunction()">Enter mobile</button>
 
 <p id="demo"></p>
 
 <script>
 function myFunction() {
-  var person = prompt("Please enter your name", "Harry Potter");
+  var person = prompt("Please enter mobile number", "+91 XXXXXXXXXX");
   if (person != null) {
     document.getElementById("demo").innerHTML =
     "Hello " + person + "! How are you today?";
