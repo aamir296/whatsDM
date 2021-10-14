@@ -4,13 +4,13 @@
 
 <p>Enter the mobile number you want to DM in the prompt box.</p>
 
-<button onclick="myFunction()">Enter mobile</button>
+<button onclick="dmMobile()">Enter mobile</button>
 
 <p id="demo"></p>
 
 <script>
-function myFunction() {
-  var mob_num = prompt("Please enter mobile number", "+91 XXXXXXXXXX");
+function dmMobile() {
+  var mob_num = prompt("Please enter mobile number", "XXXXXXXXXX");
   if (mob_num != null) {
     document.getElementById("demo").innerHTML =
     "http://api.whatsapp.com/send?phone=+91" + mob_num;
