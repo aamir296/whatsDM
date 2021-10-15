@@ -11,8 +11,8 @@ body {
 .laptop {
   -webkit-transform-origin: 0 0;
   transform-origin: 0 0;
-  -webkit-transform: scale(.6) translate(-50%); /* Scaled down for a better Try-it experience (change to 1 for full scale) */
-  transform: scale(.6) translate(-50%); /* Scaled down for a better Try-it experience (change to 1 for full scale) */
+  -webkit-transform: scale(.6) translate(-50%);
+  transform: scale(.6) translate(-50%);
   left: 50%;
   position: absolute;
   width: 1366px;
@@ -21,7 +21,7 @@ body {
   border-style: solid;
   border-color: black;
   border-width: 24px 24px 80px;
-  background-color: black;
+  background-color: aqua;
 
 }
 
@@ -54,7 +54,7 @@ body {
   z-index: 1;
 }
 
-/* The screen (or content) of the device */
+/* The screen of the device */
 .laptop .content {
   width: 1366px;
   height: 800px;
@@ -67,13 +67,34 @@ body {
 
 <div class="laptop">
   <div class="content">
-    <p style="color:white;">Welcome to WhatsDM
-    font-size: 50px;</p>
-    <p style="color:blue;">Please enter the mobile number below to DM.
-    font-size: 30px;</p>
+    <h1 style="color:green;">Welcome to WhatsDm!</h1>
+    <h2 style="color:navy;">Click the button below & enter the mobile number(without +91) you want to DM in the prompt box.</h2>
+
+<button onclick="dmMobile()"><h3>Click here to enter mobile number</h3></button>
+
+<p id="demo"></p>
+
+<script>
+function dmMobile() {
+  var mob_num = prompt("Please enter mobile number", "XXXXXXXXXX");
+  var loc = "http://api.whatsapp.com/send?phone=+91"+mob_num;
+  if (mob_num != null) {
+    document.write('<a href="' + loc + '"><h1>Click here to DM this number on WhatsApp</h1><body style="background-color:powderblue;"></a>');
+    document.close();
+  }
+}
+</script>
+    <p style="font-family:Times New Roman; color:Blue; font-weight: bold; font-size: 30px;">This page will redirect you to the OFFICIAL & SECURE WhatsApp page
+    where you can directly DM the number.</p>
+    <p style="font-family:Times New Roman; color:darkblue; font-weight: bold; font-size: 30px;">Features:</p>
+      <ul class="b">
+        <li><h2>NO DATA IS STORED - This page/site does not store any data. The numbers you enter will NOT BE stored.</h2></li>
+        <li><h2>Open Source</h2></li>
+        <li><h2>Simple & Secure</h2></li>
+      </ul>
+      <a href="https://github.com/aamirkhan363/whatsDM" target="_blank"><h3>Click here to visit the GitHub page</h3></a>
   </div>
 </div>
 
 </body>
 </html>
-
